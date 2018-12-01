@@ -1,0 +1,5 @@
+Latexmk: This is Latexmk, John Collins, 17 Jan. 2018, version: 4.55.
+
+------------
+Latexmk: Could not find file [./lab_report_1.tex].
+-- Use the -f option to force complete processing.
