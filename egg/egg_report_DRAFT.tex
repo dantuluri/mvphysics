@@ -136,8 +136,29 @@ I spent 3 hours designing the first prototype since I had to sketch each angle f
 
 
 \chapter{Controlling Vehicle Speed and Rotation}
+
+
+
 \section{Speed Control: Linear Dynamics}
+
+\qquad According to Newton's 2nd law of motion, $F_{net} = ma$ where $F$ is force and $m$ is mass and $a$ is acceleration. In this situation, as the vehicle is dropped from a height $h$, air resistance, $ F_{air} $ counteracts the gravitational force, $ F_{g} $. This would mean the net force of the vehicle would be $F_{g} - F_{air}$
+Applying Newton's 2nd law, we can deduce
+\begin{equation} \label{eq:1}
+F_{g} - F_{air} = ma
+\end{equation}
+ in this situation. From equation \ref{eq:1} we can find $F_{air}$ is directly proportional to negative acceleration, $-a$ since we can't control gravitational force (since it is constant throughout the drop) and mass $m$ is a constant too.
+ Since $F_{air}$ is directly proportional to negative acceleration, $-a$, I tried to maximize air resistance as much as possible. This would minimize acceleration and result in a slow descend of the vehicle downward, which is ideal to keep the egg intact. I decided to use large wings to maximize this air resistance force and shape the base of my vehicle in a cone shape to increase air contact, increasing the air resistance force.
+% like\textsubscript{this}
+
+%Use kinematics equations to explain how you kept the vehicle from striking the ground at high speed.
 \section{Speed Control: Linear Kinematics}
+The goal here is to reduce the final velocity, $v_f$ of the vehicle when it hits the ground. To understand how I could accomplish this, I used the kinematics equation $v_f^2 = v_i^2 + 2a\Delta x$ where $a$ is acceleration and $x$ is distance in meters. In this instance, $x$ should be Height $h$ from the height of the drop to the ground, making the equation 
+\begin{equation} \label{eq:2}
+v_f^2 = v_i^2 + 2a\Delta h
+\end{equation}.
+
+
+
 \section{Rotation Control: Angular Dynamics}
 \section{Rotation Control: Energy Conservation}
 

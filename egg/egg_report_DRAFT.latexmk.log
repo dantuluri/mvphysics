@@ -95,20 +95,23 @@ Chapter 2.
 Chapter 3.
 [7]
 Chapter 4.
-[8]
+[8] [9]
 Chapter 5.
-[9]
-Chapter 6.
 [10]
+Chapter 6.
+[11]
 Chapter 7.
 
 AED: lastpage setting LastPage
-[11] (./egg_report_DRAFT.aux) )
+[12] (./egg_report_DRAFT.aux) )
 (see the transcript file for additional information){/usr/local/texlive/2018/te
 xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/
-type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/a
-dobe/utopia/putr8a.pfb>
-Output written on egg_report_DRAFT.pdf (12 pages, 48778 bytes).
+type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
+ype1/public/fourier/fourier-ms.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/adobe/utopia/putb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/ado
+be/utopia/putr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/adobe/utop
+ia/putri8a.pfb>
+Output written on egg_report_DRAFT.pdf (13 pages, 67355 bytes).
 SyncTeX written on egg_report_DRAFT.synctex.gz.
 Transcript written on egg_report_DRAFT.log.
 Latexmk: Log file says output to 'egg_report_DRAFT.pdf'

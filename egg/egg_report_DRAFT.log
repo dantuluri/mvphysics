@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 DEC 2018 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 DEC 2018 20:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -737,36 +737,39 @@ Chapter 3.
 Chapter 4.
 [8
 
-]
+] [9]
 Chapter 5.
-[9
+[10
 
 ]
 Chapter 6.
-[10
+[11
 
 ]
 Chapter 7.
 
 AED: lastpage setting LastPage
-[11
+[12
 
 ] (./egg_report_DRAFT.aux) ) 
 Here is how much of TeX's memory you used:
- 6838 strings out of 492649
- 106134 string characters out of 6129622
- 307381 words of memory out of 5000000
- 10487 multiletter control sequences out of 15000+600000
- 99002 words of font info for 139 fonts, out of 8000000 for 9000
+ 6862 strings out of 492649
+ 106361 string characters out of 6129622
+ 307401 words of memory out of 5000000
+ 10489 multiletter control sequences out of 15000+600000
+ 102574 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,10n,43p,1200b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips
-/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/adobe/utopia/putb8
-a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb>
-Output written on egg_report_DRAFT.pdf (12 pages, 48778 bytes).
+/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/fourier/fou
+rier-ml.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/fourier/four
+ier-ms.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/adobe/utopia/putb8a.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on egg_report_DRAFT.pdf (13 pages, 67355 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  22529 words of extra memory for PDF output out of 24883 (max. 10000000)
 

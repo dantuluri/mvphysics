@@ -15,12 +15,12 @@
 \contentsline {chapter}{\numberline {4}Controlling Vehicle Speed and Rotation}{8}
 \contentsline {section}{\numberline {4.1}Speed Control: Linear Dynamics}{8}
 \contentsline {section}{\numberline {4.2}Speed Control: Linear Kinematics}{8}
-\contentsline {section}{\numberline {4.3}Rotation Control: Angular Dynamics}{8}
-\contentsline {section}{\numberline {4.4}Rotation Control: Energy Conservation}{8}
-\contentsline {chapter}{\numberline {5}Maintaining Vehicle Stability}{9}
-\contentsline {section}{\numberline {5.1}Statics: Forces and Torques}{9}
-\contentsline {chapter}{\numberline {6}Controlling Impact with the Ground}{10}
-\contentsline {section}{\numberline {6.1}Impact: Linear Dynamics}{10}
-\contentsline {section}{\numberline {6.2}Impact: Linear Momentum, Impulse, and Collisions}{10}
-\contentsline {section}{\numberline {6.3}Impact: Work}{10}
-\contentsline {chapter}{\numberline {7}Additional Benefits of Rotation}{11}
+\contentsline {section}{\numberline {4.3}Rotation Control: Angular Dynamics}{9}
+\contentsline {section}{\numberline {4.4}Rotation Control: Energy Conservation}{9}
+\contentsline {chapter}{\numberline {5}Maintaining Vehicle Stability}{10}
+\contentsline {section}{\numberline {5.1}Statics: Forces and Torques}{10}
+\contentsline {chapter}{\numberline {6}Controlling Impact with the Ground}{11}
+\contentsline {section}{\numberline {6.1}Impact: Linear Dynamics}{11}
+\contentsline {section}{\numberline {6.2}Impact: Linear Momentum, Impulse, and Collisions}{11}
+\contentsline {section}{\numberline {6.3}Impact: Work}{11}
+\contentsline {chapter}{\numberline {7}Additional Benefits of Rotation}{12}
