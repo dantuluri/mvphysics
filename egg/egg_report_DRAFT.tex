@@ -24,6 +24,7 @@
 \usepackage[english]{babel}
 \usepackage{sectsty}
 \usepackage{url, lipsum}
+\usepackage{amsmath}
 
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
@@ -121,18 +122,28 @@ I spent 3 hours designing the first prototype since I had to sketch each angle f
 
 
 
+
+
+
+
 \chapter{Drawings}
 \textbf{Note: All Drawings are drawn to scale}
 \section{Front Side of Vechicle}
+\includegraphics[width=15cm, height=8cm]{egg_final}
 \section{Sides of Vehicle}
+\includegraphics[width=15cm, height=8cm]{egg_final}
 \section{Top of Vehicle}
-
+\includegraphics[width=15cm, height=8cm]{top_egg}
 
 \chapter{Photograph}
 \section{Front Side of Vechicle}
+\includegraphics[width=15cm, height=8cm]{front}
 \section{Sides of Vehicle}
+\includegraphics[width=15cm, height=8cm]{side}
+\newline \newline
+\includegraphics[width=15cm, height=8cm]{side2}
 \section{Top of Vehicle}
-
+\includegraphics[width=15cm, height=8cm]{top}
 
 
 \chapter{Controlling Vehicle Speed and Rotation}
@@ -152,28 +163,75 @@ F_{g} - F_{air} = ma
 
 %Use kinematics equations to explain how you kept the vehicle from striking the ground at high speed.
 \section{Speed Control: Linear Kinematics}
-The goal here is to reduce the final velocity, $v_f$ of the vehicle when it hits the ground. To understand how I could accomplish this, I used the kinematics equation $v_f^2 = v_i^2 + 2a\Delta x$ where $a$ is acceleration and $x$ is distance in meters. In this instance, $x$ should be Height $h$ from the height of the drop to the ground, making the equation 
+The goal here is to reduce the final velocity, $v_f$ of the vehicle when it hits the ground. To understand how I could accomplish this, I used the kinematics equation $v_f^2 = v_i^2 + 2a\Delta x$ where $a$ is acceleration and $x$ is distance in meters. In this instance, $x$ should be height $h$ from the height of the drop to the ground, making the equation 
 \begin{equation} \label{eq:2}
 v_f^2 = v_i^2 + 2a\Delta h
-\end{equation}.
-
-
+\end{equation}. When the vehicle is dropped from rest, $v_i$ is 0 and $\Delta h$ is a constant. This is because the vehicle initially has no velocity and the distance from where it is dropped is constant. This means the equation can be simplified to 
+\begin{equation} \label{eq:3}
+v_f^2 = 2a\Delta h
+\end{equation} 
+.  This means $2a\Delta h$ is the constant of proportionality and $v_f^2$ is directly proportional to acceleration $a$.
+Since $v_f^2$ is directly proportional to acceleration $a$ and we want to reduce the final velocity, I need to find a way to decrease acceleration.\newline \newline
+As explained in the previous section, I used large wings and a cone structure to increase air contact, increasing air resistance, resulting in a decrease in acceleration. Since the acceleration decreases and the final velocity is directly proportional to the acceleration, the final velocity of the egg and the vehicle will be lower, effectively reaching the goal of reducing the final velocity.
 
 \section{Rotation Control: Angular Dynamics}
+Rotation played an important role in maintaining stability. The blades of the vehicle are tilted at a certain angle, so when the vehicle is descending, they exert a normal force on the air.  The normal force $F_n$ is has both a vertical and horizontal componnets, where the vertical component of $F_n$ is the drag created by the blades, while the horizontal component is $ F_n*cos(\theta)$, where $\theta$ is the tilt of the blades. This horizontal component generates torque, defined as $\tau = r * F$, where r is the vector from the center of the blade to the axis of rotation, which is the center of the vehicle. F is horizontal component perpendicular to r, which is $ F_n*cos(\theta)$. This means the torque of one blade on the vehicle can be represented as $\tau = r * F_n*cos(\theta)$. This torque causes the vehicle to spin, represented as $\tau = I*\omega$. $I$ is the moment of intertia of the vehicle and $\omega$ is the angular velocity. Moreover, Since the net torque is not zero (because of the blades), the vehicle's angular acceleation cannot be zero either, meaning the torque acting on the vehicle is proportional to the angular acceleration, which causes the vehicle to rotate. Since $KE = (1/2)*I*\omega^2$ and in this scenario $KE_f = \Delta PE + W_{nc}$ where $KE$ includes both linear and rotational, an increase in rotational $KE$ causes a lower linear $KE$ since $\Delta PE + W_{nc}$ is constant. This means the vehicle will descend slower with more rotational $KE$, which is ideal to preven the egg from cracking.
+
+
+
 \section{Rotation Control: Energy Conservation}
+The conservation of energy equation is as follows: 
+\begin{equation} \label{eq:4}
+W_{nc}+K_0+U_{eo}+U_{go} = K_{f}+U_{ef}+U_{gf}
+\end{equation}
+. In this equation, the nonconservative work with the initial kinetic, spring, and gravitational potential energy is equal to the final kinetic, spring, and gravitational potential energy. In this situation, there is no initial kinetic or spring potential energy. Neither is there final gravitational potential energy since the vehicle will be on the ground with height 0 after falling to the ground or have a final spring potential energy. As a result, our equation turns to be as follows:
+\begin{equation} \label{eq:5}
+W_{nc}+U_{go} = K_{f}
+\end{equation}
+This can also be written as follows:
+
+%\begin{align*} \label{eq:6}
+%W_{nc}+mgh = 1/2*m*v^2 \\
+%W_{nc}+gh = 1/2*m*v^2
+%\end{align*}
+\begin{equation} \label{eq:6}
+W_{nc}+mgh = 1/2*m*v^2
+\end{equation}
+
+Since the gravitational potential force and $mgh$ and aa both constants, the nonconservative work is proportional to the final kinetic energy. Since we don't want there to be a high amount of kinetic energy when the vehicle reaches the ground, we'll need to find what kinetic energy is proportional to to figure out what to try to decrease. $KE_f$ is proportional to $W_{nc}$ according to equation \ref{eq:6}. In order to decrease the nonconservative work, I used large airplane wings and a cone design to maximize air resistance or drag by having as much surface area of the vehicle to be creating drag. This drag decreases the nonconservative work done by $F_{air}*d$. Since $W_{nc}$ is directly proportional to $v_f^2$, decreasing nonconservative work decreases the final velocity, leading to a slow landing, which is ideal to prevent the egg from breaking.
+
 
 
 \chapter{Maintaining Vehicle Stability}
 \section{Statics: Forces and Torques}
+The vehicle was kept stable by distributing forces among the blades of the vehicle. Using Newton's 2nd law of rotation, $\tau = I*\alpha$ we can determine how the distribution of forces acts on the vehicle. As shown in the diagram, each blade has a net force of $m_{blade}*g - F_{drag}$. Since the forces of the blades are the same because they are constructed to be the same, their torques are same as well. Since the torques act in opposite direction, the net torque is equal to zero. This means for any constant moment of inertia, the angular acceleration will be zero. This results in stability for the vehicle since the angular acceleration will be zero, in the direction that is perpendicular to the ground.
+
+The vehicle will tip over in the event the drag is greater on one side of the vehicle than the other. This is because the torque, represented as $\tau = F_r$ will be different on each of the blades, depending on the cirumstance. This difference in torque will cause the vehicle to tip over, leading to the failure of the vehicle. To combat this, I designed sturdy blades, which will exert a greater normal force in the event the torques among the blades are different. This greater normal force will self-correct the vehicle and maintain stability.
 
 
 \chapter{Controlling Impact with the Ground}
+
 \section{Impact: Linear Dynamics}
+As the vehicle hit the ground, there are several forces affecting its impact. There is the normal force, $F_n$, gravity, $F_g$, and drag, $F_{drag}$. This means the net force on the egg in the air can be represented by $m*g-F_{drag} = m*a$ since $F_{net} = ma$, according to Newton's 2nd law. Upon impact, however, net force on the egg can be represented as $F_n - F_g = m*a$ according to Newton's 2nd law. This means a lower acceleration or lower mass will reduce the normal force and gravitational force. To do this, I increased drag by designing relatively large wings. This decreases the net force on the egg, which is ideal to prevent the egg from breaking. I also constructed a lightweight structure under a 100 grams, which also reduces net force on the egg.
+
 \section{Impact: Linear Momentum, Impulse, and Collisions}
+Ideally, an inelastic collision would be ideal. An inelastic collision would minimize total kinetic energy since it will not be conserved. An inelastic collision would "stick" the vehicle to the ground since the vehicle has come to a complete stop upon impacting the ground. An inelastic collision is also ideal since the egg would not fall out and break as with an elastic collision. However, an ideal inelastic collision is not feasible because of various factors including external forces.
+
+When the egg hits the ground, an impulse on the egg occurs. This impulse is a change in momentum and can be represented as $I = F*t$. Since I is constant, in order to minimize the force on the egg, the time over which the force lasts on the egg must be extended. 
+
+A different way the force on the egg is minimized upon impact is by reducing the mass of the vehicle. Since impulse can also be written as $m\Delta v = Ft$, minimizing the mass of the vehicle reduces the force on the vehicle, which in turn reduces the velocity from what was previously discussed. This leads to a slow and gradual descent of the vehicle, preventing the egg from breaking.
+
 \section{Impact: Work}
+The equation for work can be represented as $W = F*d*cos(\theta)$. Since final kinetic energy, $KE_f$ should be zero by the time of impact, $W = \Delta KE = KE_{f}-KE_{initial}$ is equivalent to $W = -KE_{initial}$. From our previous equation, we can substitue to finaly get
 
+\begin{equation} \label{eq:7}
+F*d*cos(\theta) = -KE_{initial}
+\end{equation}
 
-\chapter{Additional Benefits of Rotation}
+To decrease forces acted upon the egg, the distance the force acts on the egg needs to be extended. In response to this issue, I made my structure high. This allows the lower body of my structure to be compressed, allowing the forces acting upon the egg to extend.
+
+%
+% \chapter{Additional Benefits of Rotation}
 
 
 
